@@ -42,7 +42,7 @@ def read_annotation(annotation: str, args):
             annotations.append(row)
 
     ''' Sort the array based on the class '''
-    annotations = sorted(np.array(annotations[1:]), key=lambda d: obj_class(ast.literal_eval(d[6])['class'], args))
+    annotations = sorted(np.array(annotations[1:]), key=lambda d: obj_class(ast.literal_eval(d[6])['class'], args)) # If you setup different name, change class to something else.
     return np.array(annotations)
 
 def extract_polygons(annotations: np.ndarray):  
